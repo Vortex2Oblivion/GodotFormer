@@ -1,0 +1,14 @@
+{
+	"search.exclude": {
+		"export/**/*.hx": true
+	},
+	"[haxe]": {
+		"editor.formatOnSave": true,
+		"editor.formatOnPaste": true,
+		"editor.codeActionsOnSave": {
+			"source.sortImports": true
+		}
+	},
+	"haxe.enableExtendedIndentation": true,
+	"godot_tools.editor_path": "/home/paul/Desktop/Godot_v4.0-alpha4_linux.64"
+}
