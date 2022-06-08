@@ -1,5 +1,5 @@
 extends KinematicBody2D
-var bullet = preload("res://source/scenes/Bullet.tscn")
+var Bullet = preload("res://source/scenes/Bullet.tscn")
 
 export var speed = 300 # How fast the player will move (pixels/sec).
 const GRAVITY = 10 # in pixels
@@ -32,6 +32,6 @@ func _physics_process(delta):
 		position.y += speed * delta
 	velocity = move_and_slide(velocity)
 	if Input.is_action_pressed("shoot"):
-		var bul = bullet.instance()
+		var bul = Bullet.instance()
 		owner.add_child(bul)
 		bul.global_position = global_position
