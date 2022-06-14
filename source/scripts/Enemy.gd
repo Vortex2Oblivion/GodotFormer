@@ -5,9 +5,12 @@ export var speed = 300 # How fast the player will move (pixels/sec).
 const GRAVITY = 5 # in pixels
 const JUMP = 25 # start speed px/s
 const SPEED = 300 # px/s
+var health = 100
 var velocity = Vector2.ZERO # (0,0)
 func _ready():
 	pass
+func _process(delta):
+	$ProgressBar.value = health
 func _on_Timer_timeout():
 	print(str($Timer.wait_time) + " second(s) finished")
 

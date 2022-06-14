@@ -1,8 +1,7 @@
-extends Area2D
+extends KinematicBody2D
 export (PackedScene) var Bullet
-var speed = 750
+var velocity = Vector2(2, 0)
+var speed = 650
+
 func _physics_process(delta):
-	if Input.is_action_just_pressed("shoot"):
-		var b = Bullet.instance()
-		owner.add_child(b)
-		b.transform = $Bullet.global_transform
+	var colision_info = move_and_collide(velocity.normalized() * delta * speed)
