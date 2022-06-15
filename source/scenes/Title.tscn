@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://source/scripts/Title.gd" type="Script" id=1]
 [ext_resource path="res://assets/icon.png" type="Texture" id=2]
 [ext_resource path="res://source/scripts/RGB godot lmao.gd" type="Script" id=3]
 [ext_resource path="res://source/scripts/QuitConfirm.gd" type="Script" id=4]
+[ext_resource path="res://source/scenes/DebugText.tscn" type="PackedScene" id=5]
 
 [sub_resource type="Shader" id=1]
 code = "// HSV to RBG from https://www.rapidtables.com/convert/color/hsv-to-rgb.html
@@ -268,6 +269,15 @@ margin_right = 626.0
 margin_bottom = 393.0
 text = "                  Made In Godot
         (who would have guessed?)"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+margin_left = -401.0
+margin_top = 193.0
+margin_right = -237.0
+margin_bottom = 249.0
+text = "gaydot bottom text"
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 5 )]
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]

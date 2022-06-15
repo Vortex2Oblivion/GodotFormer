@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://source/scripts/DebugText.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 0.454902 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 4.0
+expand_margin_right = 4.0
+expand_margin_top = 4.0
+expand_margin_bottom = 4.0
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Debug Text" type="Label" parent="."]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 70.0
+margin_bottom = 35.0
+custom_styles/normal = SubResource( 1 )
+text = "FPS: 0
+Objects: 0"
+script = ExtResource( 1 )
