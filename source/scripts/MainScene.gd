@@ -8,4 +8,3 @@ func _physics_process(delta):
 	$Enemy.position = $Enemy.position.linear_interpolate(player_pos, delta * ENEMY_FOLLOW_SPEED)
 	if Input.is_action_pressed("exit_to_title"):
 		get_tree().change_scene("res://source/scenes/PauseMenu.tscn")
-
