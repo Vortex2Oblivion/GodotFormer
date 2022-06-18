@@ -24,8 +24,6 @@ func shoot():
 	var bullet = bulletPath.instance()	
 	get_parent().add_child(bullet)
 	bullet.position = $Position2D.global_position
-# _physics_process is called after the inherited _physics_process function.
-# This allows the Player and Enemy scenes to be affected by gravity.
 func _physics_process(delta):
 	if Input.is_action_pressed("move_right"):
 		position.x += speed * delta
