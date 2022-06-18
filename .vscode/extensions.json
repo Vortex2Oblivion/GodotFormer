@@ -1,6 +1,6 @@
 {
 	"recommendations": [
-		"openfl.lime-vscode-extension",
+		"geequlim.godot-tools",
 		"redhat.vscode-xml"
 	]
 }

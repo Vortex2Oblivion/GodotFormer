@@ -9,8 +9,7 @@ var health = 100
 var velocity = Vector2.ZERO # (0,0)
 func _ready():
 	pass
-func _process(delta):
-	$ProgressBar.value = health
+
 func _on_Timer_timeout():
 	print(str($Timer.wait_time) + " second(s) finished")
 
